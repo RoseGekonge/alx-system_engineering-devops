@@ -1,2 +1,2 @@
 #!/bin/bash
-alias PATH | mkdir action
+source PATH | mkdir action
