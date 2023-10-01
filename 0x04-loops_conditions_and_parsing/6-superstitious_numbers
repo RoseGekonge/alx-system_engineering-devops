@@ -1,0 +1,22 @@
+#!/usr/bin/env bash
+# This script is displaying "Best School" 10 times but bad luck at 4th round and good luck at 8th round
+counter=1
+
+# Using a while loop to display "Best School" 10 times with a special case
+while [ $counter -le 20 ]; do
+  if [ $counter -eq 4 ]; then
+    # Special case for the 4th iteration
+    echo -e "4\nbad luck from China"
+  elif [ $counter -eq 9 ]; then
+    # Special case for the 9th iteration
+    echo -e "9\nbad luck from Japan"
+  elif [ $counter -eq 17 ]; then
+    #Special case for the 17th iteration
+    echo -e "17\nbad luck from Italy"
+  else
+    echo "$counter"
+  fi
+
+  # Increment the counter
+  ((counter++))
+done

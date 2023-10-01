@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+# This script is displaying all files in current working directory
+
+# Use a for loop to iterate through non-hidden files in the current directory
+for file in *; do
+  # Check if the file is a regular file (not a directory) and not hidden
+  if [[ -f "$file" && "$file" != .* ]]; then
+    # Extract the part of the name after the first dash
+    name_without_first_dash="${file#*-}"
+    
+    # Print the modified name
+    echo "$name_without_first_dash"
+  fi
+done
