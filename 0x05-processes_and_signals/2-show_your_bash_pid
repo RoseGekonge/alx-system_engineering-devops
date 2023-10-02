@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# Ignore ShellCheck warning SC2009 for the command substitution.
+# shellcheck disable=SC2009
+ps auxf | grep "[b]ash"
